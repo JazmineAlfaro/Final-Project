@@ -6,36 +6,42 @@ using namespace std;
 
 class Producto{
 protected:
-	string serie; //codigo de identificacion de la empresa o de fabrica
 	string codigo;
-	string descripcion;
-	double costo;
-	double utilidad ; //ganancia
+	string articulo;
+	string clase;
+	string marca;
+	string modelo;
+	string unidad_principal; //unitario, dual, etc.
 	double p_venta; //costo y utilidad
-	double moneda; //soles o dólares
-	double unidad_principal; //unitario, dual, etc.
-	
+	double moneda; //soles o dÃ³lares
+	double costo;
+	double stock ; //ganancia
 	
 public:
 	Producto();
 	//get
-	string getSerie();
 	string getCodigo();
-	string getDescripcion();
-	double getCosto();
-	double getUtilidad();
+	string getArticulo();
+	string getClase();
+	string getMarca();
+	string getModelo();
+	string getUnidad();
 	double getPventa();
 	double getMoneda();
-	double getUnidad();
+	double getCosto();
+	double getStock(); 
 	//set
-	string setSerie(string seri);
 	string setCodigo(string code);
-	string setDescripcion(string des);
-	double setCosto(double cost);
-	double setUtilidad(double uti);
+	string setArticulo(string arti);
+	string setClase(string clas);
+	string setMarca(string mark);
+	string setModelo(string model);
+	string setUnidad(string uni);
 	double setPventa(double ventita);
 	double setMoneda(double coin);
-	double setUnidad(double uni);
+	double setCosto(double cost);
+	double setStock(double cant);
+	
 	
 	void print();
 	
