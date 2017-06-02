@@ -1,6 +1,7 @@
 
 # Base de Datos para Empresa de productos tecnológicos
-Esta base de datos puede ser modificada para ser usada en alguna empresa de otro rubro
+Esta base de datos puede ser modificada para ser usada en alguna empresa de otro rubro.
+
 Consta de una clase base Producto con las siguientes características:
 - Código
 - Artículo
