@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1496866933 source:c:\users\user\documents\db\main.cpp
+	<iostream>
+	"Producto.h"
+	"Laptop.h"
+	"Smartphone.h"
+	"Ask.h"
+
+1496866381 c:\users\user\documents\db\include\producto.h
+	<iostream>
+	<string>
+
+1496864327 c:\users\user\documents\db\include\ask.h
+	<iostream>
+	<string>
+
+1496866639 c:\users\user\documents\db\include\laptop.h
+	"Producto.h"
+	<iostream>
+	<string>
+
+1496864327 source:c:\users\user\documents\db\src\ask.cpp
+	"Ask.h"
+
+1496866222 source:c:\users\user\documents\db\src\laptop.cpp
+	"Laptop.h"
+
+1496865532 source:c:\users\user\documents\db\src\producto.cpp
+	"Producto.h"
+
+1496867263 source:c:\users\user\documents\db\src\smartphone.cpp
+	"Smartphone.h"
+
+1496867235 c:\users\user\documents\db\include\smartphone.h
+	"Producto.h"
+	"Laptop.h"
+	<iostream>
+	<string>
+
