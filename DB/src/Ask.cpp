@@ -1,5 +1,16 @@
 #include "Ask.h"
 
+int Ask::askNumber(){
+    int number;
+    cin >> number;
+    return number;
+}
+
+char Ask::askRpta(){
+    char cito;
+    cout<<"Desea seguir: "<<endl;
+    cin >> cito;
+}
 string Ask::askCodigo(){
     string code;
     cout<<"Ingresa el codigo: "<<endl;

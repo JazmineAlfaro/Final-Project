@@ -7,6 +7,8 @@ using namespace std;
 
 class Ask{
 public:
+    int askNumber();
+    char askRpta();
     string askCodigo();
     string askArticulo();
     string askClase();

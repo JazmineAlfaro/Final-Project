@@ -35,12 +35,16 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Ask.h" />
+		<Unit filename="include/BasedeDatos.h" />
 		<Unit filename="include/Laptop.h" />
+		<Unit filename="include/Modificar.h" />
 		<Unit filename="include/Producto.h" />
 		<Unit filename="include/Smartphone.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Ask.cpp" />
+		<Unit filename="src/BasedeDatos.cpp" />
 		<Unit filename="src/Laptop.cpp" />
+		<Unit filename="src/Modificar.cpp" />
 		<Unit filename="src/Producto.cpp" />
 		<Unit filename="src/Smartphone.cpp" />
 		<Extensions>
