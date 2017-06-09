@@ -32,7 +32,6 @@ int opcion(){
 	return opc;
 }
 void ingresar(){
-    int x;
     cout<<endl;
     cout << " " << 1 << " Ingresar laptop" << endl;
     cout<<endl;
@@ -42,18 +41,6 @@ void ingresar(){
     cout<<endl;
 	cout << " " << 4 << " Salir " << endl;
 	cout<<endl;
-    cin>>x;
-    switch(x){
-    case 1:
-        //ojala();
-         void ingresaLaptop();
-    case 2:
-        cout<<"";
-    case 3:
-        menu1();
-    case 4:
-        exit(4);
-	}
 }
 
 void ojala(){
@@ -61,8 +48,7 @@ void ojala(){
 }
 
 void ingresa1(){
-    ojala();
-    /*
+
     switch(opcion()){
     case 1:
         //ojala();
@@ -73,7 +59,7 @@ void ingresa1(){
         menu1();
     case 4:
         exit(4);
-	}*/
+	}
 }
 
 void visualizar(){
@@ -210,11 +196,11 @@ void seleccionar(int opc){
 int main()
 {
     BasedeDatos b;
-
-    //menu1();
+    Laptop a;
+   // menu1();
     //seleccionar(opcion());
-    b.ingresaProducto();
-
+    b.ingresaLaptop();
+    //ojala();
 
     //buscar();
     //Smartphone p;

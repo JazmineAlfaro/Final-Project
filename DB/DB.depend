@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1496987665 source:c:\users\user\documents\db\main.cpp
+1497022614 source:c:\users\user\documents\db\main.cpp
 	<iostream>
 	<cstdlib>
 	"Producto.h"
@@ -8,7 +8,7 @@
 	"BasedeDatos.h"
 	"Ask.h"
 
-1496866381 c:\users\user\documents\db\include\producto.h
+1497025778 c:\users\user\documents\db\include\producto.h
 	<iostream>
 	<string>
 
@@ -16,7 +16,7 @@
 	<iostream>
 	<string>
 
-1496866639 c:\users\user\documents\db\include\laptop.h
+1497025134 c:\users\user\documents\db\include\laptop.h
 	"Producto.h"
 	<iostream>
 	<string>
@@ -24,10 +24,10 @@
 1496984859 source:c:\users\user\documents\db\src\ask.cpp
 	"Ask.h"
 
-1496866222 source:c:\users\user\documents\db\src\laptop.cpp
+1497024967 source:c:\users\user\documents\db\src\laptop.cpp
 	"Laptop.h"
 
-1496986355 source:c:\users\user\documents\db\src\producto.cpp
+1497025749 source:c:\users\user\documents\db\src\producto.cpp
 	"Producto.h"
 
 1496867263 source:c:\users\user\documents\db\src\smartphone.cpp
@@ -39,7 +39,7 @@
 	<iostream>
 	<string>
 
-1496982526 source:c:\users\user\documents\db\src\modificar.cpp
+1497025862 source:c:\users\user\documents\db\src\modificar.cpp
 	"Modificar.h"
 
 1496982429 c:\users\user\documents\db\include\modificar.h
@@ -50,7 +50,7 @@
 	"Smartphone.h"
 	"Ask.h"
 
-1496987195 source:c:\users\user\documents\db\src\basededatos.cpp
+1497025943 source:c:\users\user\documents\db\src\basededatos.cpp
 	"BasedeDatos.h"
 
 1496986764 c:\users\user\documents\db\include\basededatos.h
