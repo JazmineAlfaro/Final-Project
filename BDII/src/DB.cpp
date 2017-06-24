@@ -2,34 +2,33 @@
 
 DB::DB()
 {
-    //ctor
-}
-
-DB::~DB()
-{
-    //dtor
+    ;//ctor
 }
 
 void DB::cargar(){
-
-
+    Producto *temp;
+    string STRING;
+    archivo.open("productos.txt");
+     while(!archivo.eof()){
+	        getline(archivo,STRING);
+	        switch (STRING[0]){
+	            case 'P':
+	                temp= new Producto(STRING);
+                    break;
+                case 'L':
+                    temp= new Laptop(STRING);
+                    break;
+                case 'C':
+                    temp = new Computer(STRING);
+            }
+	        productitos.push_back(temp);
+    }
 }
 void DB::visualizar(){
-
-    Producto *temp;
-
     string STRING;
     archivo.open("productos.txt");
         while(!archivo.eof()){
 	        getline(archivo,STRING);
-
-	        switch (STRING.()[0]){
-
-            case 'L':
-                temp= new Laptop(STRING);
-	        }
-
-	        productitos.
 	        cout<<STRING<<endl;
         }
 	archivo.close();

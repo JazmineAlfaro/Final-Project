@@ -14,6 +14,7 @@ protected:
 
 public:
 	Producto();
+	Producto(string algo);
 	//get
 	string getCodigo();
     string getPventa();

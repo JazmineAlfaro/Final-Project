@@ -2,12 +2,12 @@
 1498327399 source:c:\users\user\documents\bdii\src\producto.cpp
 	"Producto.h"
 
-1498326285 c:\users\user\documents\bdii\include\producto.h
+1498329776 c:\users\user\documents\bdii\include\producto.h
 	<iostream>
 	<string>
 	<fstream>
 
-1498326965 source:c:\users\user\documents\bdii\main.cpp
+1498330171 source:c:\users\user\documents\bdii\main.cpp
 	<iostream>
 	"Producto.h"
 	"Ask.h"

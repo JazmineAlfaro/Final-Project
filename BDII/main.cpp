@@ -24,7 +24,7 @@ int main()
     a.setPventa("19.00");
     a.setStock("11");
     a.guardar();
-    a.visualizar();
+    //a.visualizar();
 
     system("productos.txt");
 

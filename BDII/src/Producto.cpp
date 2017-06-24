@@ -5,6 +5,15 @@ Producto::Producto(){
 	this->p_venta = " ";
 	this->stock = " ";
 }
+/*
+Producto::Producto(string algo){
+
+
+	this->codigo = " ";
+	this->p_venta = " ";
+	this->stock = " ";
+}
+*/
 
 string Producto::getCodigo(){return codigo;}
 string Producto::getPventa(){return p_venta;}
@@ -31,14 +40,4 @@ bool Producto::insertar();
 bool Producto::eliminar();
 
 
-
-void Producto::visualizar(){
-    string STRING;
-    archivo.open("productos.txt");
-        while(!archivo.eof()){
-	        getline(archivo,STRING);
-	        cout<<STRING<<endl;
-        }
-	archivo.close();
-}
 */
