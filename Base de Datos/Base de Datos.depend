@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1498533007 source:c:\users\user\documents\base de datos\main.cpp
+	<iostream>
+	"Producto.h"
+	"Laptop.h"
+	"Celular.h"
+	"DB.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1498532304 c:\users\user\documents\base de datos\include\producto.h
+	<iostream>
+	<string.h>
+	<fstream>
+	<vector>
+
+1498534206 source:c:\users\user\documents\base de datos\src\db.cpp
+	"DB.h"
+
+1498534226 c:\users\user\documents\base de datos\include\db.h
+	"Producto.h"
+	"Laptop.h"
+	"Celular.h"
+	<vector>
+	<string>
+
+1498534212 source:c:\users\user\documents\base de datos\src\producto.cpp
+	"Producto.h"
+
+1498529376 source:c:\users\user\documents\base de datos\src\computer.cpp
+	"Computer.h"
+
+1498529376 c:\users\user\documents\base de datos\include\computer.h
+	<Producto.h>
+
+1498531794 c:\users\user\documents\base de datos\include\laptop.h
+	<Producto.h>
+
+1498532304 c:\users\user\documents\base de datos\include\celular.h
+	<Producto.h>
+	<string>
+
+1498532179 source:c:\users\user\documents\base de datos\src\celular.cpp
+	"Celular.h"
+
+1498532202 source:c:\users\user\documents\base de datos\src\laptop.cpp
+	"Laptop.h"
+
