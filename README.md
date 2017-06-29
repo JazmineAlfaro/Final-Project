@@ -1,28 +1,22 @@
 
-# Base de Datos para Empresa de productos tecnológicos
-Esta base de datos puede ser modificada para ser usada en alguna empresa de otro rubro.
+# Product Database
 
-Consta de una clase base Producto con las siguientes características:
+Podrás utilizar esta base de datos para poder ingresar, eliminar, visualizar y modificar tus productos:
+Tenemos dos productos: Laptops y Celulares; amobos con características similares y a la vez propias.
+
+Las laptops y celulares tienen:
 - Código
-- Artículo
-- Marca
-- Modelo
-- Unidad Principal
-- Precio de Venta
-- Moneda
-- Costo
+- Precio 
 - Stock
 
-Además hay clases hijas como:
-La clase Laptop con las siguientes características:
-- Marca
-- Modelo
+Además laptop tiene:
 - Procesador
+- Disco Duro
 
-Con esta base de datos podrás:
-- Agregar productos
-- Eliminar productos
-- Buscar Productos
-- Visualizar todos los productos
+Y celular tiene:
+- Marca 
+- Modelo
 
-Todos los datos que ingreses estarán guardados en un archivo txt, así no se perderá tu información.
+Para utilizar esta base de datos noo tendrás que instalar ninguna librería, tiene un diseño simple, por lo tanto es muy fácil 
+de entender.
+Todos los productos que ingreses estarán guardados en un archivo txt llamado productos.
