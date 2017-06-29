@@ -1,0 +1,238 @@
+# depslib dependency file v1.0
+1498327399 source:c:\users\user\documents\bdii\src\producto.cpp
+	"Producto.h"
+
+1498329776 c:\users\user\documents\bdii\include\producto.h
+	<iostream>
+	<string>
+	<fstream>
+
+1498330171 source:c:\users\user\documents\bdii\main.cpp
+	<iostream>
+	"Producto.h"
+	"Ask.h"
+	"Menu.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1497724702 c:\users\user\documents\bdii\include\ask.h
+	<iostream>
+	<string>
+	<vector>
+
+1497724702 c:\users\user\documents\bdii\include\menu.h
+	<vector>
+	<string>
+	<iostream>
+
+1497724702 source:c:\users\user\documents\bdii\src\ask.cpp
+	"Ask.h"
+
+1497721867 source:c:\users\user\documents\bdii\src\crear.cpp
+	"Crear.h"
+
+1497724702 c:\users\user\documents\bdii\include\crear.h
+	"Ask.h"
+	"Producto.h"
+
+1497724702 source:c:\users\user\documents\bdii\src\menu.cpp
+	"Menu.h"
+
+1498325946 source:c:\users\user\documents\bdii\src\db.cpp
+	"DB.h"
+
+1498324984 c:\users\user\documents\bdii\include\db.h
+
+1498362941 source:c:\users\user\documents\bd\final-project\bdii\main.cpp
+	<iostream>
+	"Producto.h"
+	"DB.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1498411455 c:\users\user\documents\bd\final-project\bdii\include\producto.h
+	<iostream>
+	<string>
+	<fstream>
+
+1498363037 c:\users\user\documents\bd\final-project\bdii\include\ask.h
+	<iostream>
+	<string>
+	"Producto.h"
+
+1498331056 c:\users\user\documents\bd\final-project\bdii\include\menu.h
+	<vector>
+	<string>
+	<iostream>
+
+1498363037 source:c:\users\user\documents\bd\final-project\bdii\src\ask.cpp
+	"Ask.h"
+
+1498331056 source:c:\users\user\documents\bd\final-project\bdii\src\crear.cpp
+	"Crear.h"
+
+1498331056 c:\users\user\documents\bd\final-project\bdii\include\crear.h
+	"Ask.h"
+	"Producto.h"
+
+1498331056 source:c:\users\user\documents\bd\final-project\bdii\src\db.cpp
+	"DB.h"
+
+1498364716 c:\users\user\documents\bd\final-project\bdii\include\db.h
+	"Producto.h"
+	"Ask.h"
+	<vector>
+	<string>
+	<fstream>
+
+1498331056 source:c:\users\user\documents\bd\final-project\bdii\src\menu.cpp
+	"Menu.h"
+
+1498331056 source:c:\users\user\documents\bd\final-project\bdii\src\producto.cpp
+	"Producto.h"
+
+1498421763 source:c:\users\user\documents\bd\final-project\bdiil\main.cpp
+	<iostream>
+	"Producto.h"
+	"DB.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1498443156 c:\users\user\documents\bd\final-project\bdiil\include\producto.h
+	<iostream>
+	<string>
+	<fstream>
+
+1498434503 c:\users\user\documents\bd\final-project\bdiil\include\db.h
+	"Producto.h"
+	"Ask.h"
+	<vector>
+	<string>
+	<fstream>
+
+1498363037 c:\users\user\documents\bd\final-project\bdiil\include\ask.h
+	<iostream>
+	<string>
+	"Producto.h"
+
+1498363037 source:c:\users\user\documents\bd\final-project\bdiil\src\ask.cpp
+	"Ask.h"
+
+1498331056 source:c:\users\user\documents\bd\final-project\bdiil\src\crear.cpp
+	"Crear.h"
+
+1498331056 c:\users\user\documents\bd\final-project\bdiil\include\crear.h
+	"Ask.h"
+	"Producto.h"
+
+1498331056 source:c:\users\user\documents\bd\final-project\bdiil\src\menu.cpp
+	"Menu.h"
+
+1498331056 c:\users\user\documents\bd\final-project\bdiil\include\menu.h
+	<vector>
+	<string>
+	<iostream>
+
+1498434626 source:c:\users\user\documents\bd\final-project\bdiil\src\db.cpp
+	"DB.h"
+
+1498443156 source:c:\users\user\documents\bd\final-project\bdiil\src\producto.cpp
+	"Producto.h"
+
+1498519397 source:e:\practicas c++\bdiil\main.cpp
+	<iostream>
+	"Producto.h"
+	"DB.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1498516343 e:\practicas c++\bdiil\include\producto.h
+	<iostream>
+	<string>
+	<fstream>
+
+1498519069 e:\practicas c++\bdiil\include\db.h
+	"Producto.h"
+	"Ask.h"
+	<vector>
+	<string>
+	<fstream>
+
+1498513871 e:\practicas c++\bdiil\include\ask.h
+	<iostream>
+	<string>
+	"Producto.h"
+
+1498513871 source:e:\practicas c++\bdiil\src\ask.cpp
+	"Ask.h"
+
+1498513871 source:e:\practicas c++\bdiil\src\crear.cpp
+	"Crear.h"
+
+1498513871 e:\practicas c++\bdiil\include\crear.h
+	"Ask.h"
+	"Producto.h"
+
+1498519360 source:e:\practicas c++\bdiil\src\db.cpp
+	"DB.h"
+
+1498513871 source:e:\practicas c++\bdiil\src\menu.cpp
+	"Menu.h"
+
+1498513871 e:\practicas c++\bdiil\include\menu.h
+	<vector>
+	<string>
+	<iostream>
+
+1498516298 source:e:\practicas c++\bdiil\src\producto.cpp
+	"Producto.h"
+
+1498626499 source:c:\users\user\desktop\bdiil\main.cpp
+	<iostream>
+	"Producto.h"
+	"DB.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1498716561 c:\users\user\desktop\bdiil\include\producto.h
+	<iostream>
+	<string>
+	<fstream>
+
+1498626894 c:\users\user\desktop\bdiil\include\db.h
+	"Producto.h"
+	"Ask.h"
+	<vector>
+	<string>
+	<fstream>
+
+1498537867 c:\users\user\desktop\bdiil\include\ask.h
+
+1498537867 source:c:\users\user\desktop\bdiil\src\ask.cpp
+
+1498513872 source:c:\users\user\desktop\bdiil\src\crear.cpp
+	"Crear.h"
+
+1498513872 c:\users\user\desktop\bdiil\include\crear.h
+	"Ask.h"
+	"Producto.h"
+
+1498626483 source:c:\users\user\desktop\bdiil\src\db.cpp
+	"DB.h"
+
+1498513872 source:c:\users\user\desktop\bdiil\src\menu.cpp
+	"Menu.h"
+
+1498513872 c:\users\user\desktop\bdiil\include\menu.h
+	<vector>
+	<string>
+	<iostream>
+
+1498519702 source:c:\users\user\desktop\bdiil\src\producto.cpp
+	"Producto.h"
+
