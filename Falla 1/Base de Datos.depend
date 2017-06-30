@@ -1,0 +1,89 @@
+# depslib dependency file v1.0
+1498781293 source:c:\users\user\documents\base de datos\main.cpp
+	<iostream>
+	"Producto.h"
+	"DB.h"
+	<vector>
+	<stdlib.h>
+	<string>
+	<fstream>
+
+1498781223 c:\users\user\documents\base de datos\include\producto.h
+	<iostream>
+	<string>
+	<fstream>
+
+1498781223 c:\users\user\documents\base de datos\include\db.h
+	"Producto.h"
+	"Laptop.h"
+	"Celular.h"
+	<iostream>
+	<vector>
+	<string>
+	<fstream>
+	<cstdlib>
+
+1498781308 source:c:\users\user\documents\base de datos\src\db.cpp
+	"DB.h"
+
+1498781223 source:c:\users\user\documents\base de datos\src\producto.cpp
+	"Producto.h"
+
+1498776397 c:\users\user\documents\base de datos\include\laptop.h
+	<string>
+	"Producto.h"
+
+1498776397 c:\users\user\documents\base de datos\include\celular.h
+	<string>
+	"Producto.h"
+
+1498776397 source:c:\users\user\documents\base de datos\src\celular.cpp
+	"Celular.h"
+
+1498776397 source:c:\users\user\documents\base de datos\src\laptop.cpp
+	"Laptop.h"
+
+1498781312 source:c:\users\user\documents\a\falla 1\main.cpp
+	<iostream>
+	"Producto.h"
+	"DB.h"
+	<vector>
+	<stdlib.h>
+	<string>
+	<fstream>
+
+1498783556 c:\users\user\documents\a\falla 1\include\producto.h
+	<iostream>
+	<string>
+	<fstream>
+
+1498781223 c:\users\user\documents\a\falla 1\include\db.h
+	"Producto.h"
+	"Laptop.h"
+	"Celular.h"
+	<iostream>
+	<vector>
+	<string>
+	<fstream>
+	<cstdlib>
+
+1498776397 c:\users\user\documents\a\falla 1\include\laptop.h
+	<string>
+	"Producto.h"
+
+1498776397 c:\users\user\documents\a\falla 1\include\celular.h
+	<string>
+	"Producto.h"
+
+1498776397 source:c:\users\user\documents\a\falla 1\src\celular.cpp
+	"Celular.h"
+
+1498776397 source:c:\users\user\documents\a\falla 1\src\laptop.cpp
+	"Laptop.h"
+
+1498783556 source:c:\users\user\documents\a\falla 1\src\db.cpp
+	"DB.h"
+
+1498783556 source:c:\users\user\documents\a\falla 1\src\producto.cpp
+	"Producto.h"
+
