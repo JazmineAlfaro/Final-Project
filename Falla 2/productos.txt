@@ -1,0 +1,13 @@
+producto1,40.00,15
+producto1,40.00,15
+producto2,19.00,11
+Laptop1,48.00,14
+producto1,40.00,15
+producto1,40.00,15
+producto2,19.00,11
+Laptop1,48.00,14
+producto1,40.00,15
+producto1,40.00,15
+producto2,19.00,11
+Laptop1,48.00,14
+producto1,40.00,15
