@@ -1,7 +1,7 @@
 #ifndef DB_H
 #define DB_H
 #include "Producto.h"
-#include "Ask.h"
+#include "Laptop.h"
 #include <vector>
 #include <string>
 #include<fstream>

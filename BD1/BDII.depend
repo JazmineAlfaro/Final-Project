@@ -236,3 +236,53 @@
 1498519702 source:c:\users\user\desktop\bdiil\src\producto.cpp
 	"Producto.h"
 
+1498786732 source:c:\users\user\desktop\bd1\main.cpp
+	<iostream>
+	"Producto.h"
+	"DB.h"
+	"Laptop.h"
+	<vector>
+	<stdlib.h>
+	<string>
+
+1498716561 c:\users\user\desktop\bd1\include\producto.h
+	<iostream>
+	<string>
+	<fstream>
+
+1498779225 c:\users\user\desktop\bd1\include\db.h
+	"Producto.h"
+	"Laptop.h"
+	<vector>
+	<string>
+	<fstream>
+
+1498513872 source:c:\users\user\desktop\bd1\src\crear.cpp
+	"Crear.h"
+
+1498513872 c:\users\user\desktop\bd1\include\crear.h
+	"Ask.h"
+	"Producto.h"
+
+1498513872 source:c:\users\user\desktop\bd1\src\menu.cpp
+	"Menu.h"
+
+1498513872 c:\users\user\desktop\bd1\include\menu.h
+	<vector>
+	<string>
+	<iostream>
+
+1498519702 source:c:\users\user\desktop\bd1\src\producto.cpp
+	"Producto.h"
+
+1498779947 source:c:\users\user\desktop\bd1\src\db.cpp
+	"DB.h"
+
+1498778897 c:\users\user\desktop\bd1\include\laptop.h
+	"Producto.h"
+
+1498778800 source:c:\users\user\desktop\bd1\src\laptop.cpp
+	"Laptop.h"
+
+1498785613 source:c:\users\user\desktop\bd1\src\celular.cpp
+

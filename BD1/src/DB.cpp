@@ -51,7 +51,7 @@ void DB::Visualizar()
 {
     int t=productitos.size();
     if(t==0)
-        cout<<" Base de datos vacia";
+        cout<<" Base de datos vacia"<<endl;
     else
     {
         cout<<endl;

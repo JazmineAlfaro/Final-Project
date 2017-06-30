@@ -13,17 +13,22 @@ public:
         Laptop(string,string,string,string,string);
         Laptop(string);
         Laptop(const Laptop &L);
-        virtual ~Laptop();
+        string getCodigo();
+        string getPventa();
+        string getStock();
         string getProcs();
         string getMarca();
 
+        void setCodigo(string codigo);
+        void setPventa(string p_venta);
+        void setStock(string stock);
         void setProcs(string procesador);
         void setMarca(string marca);
         friend ostream &operator<< (ostream &o,Laptop l){
         o<<"CODIGO:"<<l.codigo<<endl;
         o<<"P.VENTA:"<<l.p_venta<<endl;
-        o<<"STOCK:"<<l.stock<<end;
-        o<<"PROCESADOR:"<<l.procesador<<end;
+        o<<"STOCK:"<<l.stock<<endl;
+        o<<"PROCESADOR:"<<l.procesador<<endl;
         o<<"MARCA:"<<l.marca;
         return o;
         }
