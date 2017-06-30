@@ -13,7 +13,5 @@ int main()
 	DB* c = DB::instancia();
 	c->menu_principal();
 	c->seleccion1();
-	//c->ver_Celulares();
-	
 
 }

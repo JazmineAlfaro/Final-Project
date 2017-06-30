@@ -49,6 +49,7 @@ public:
 	void modificar();
 	void elegirModificar();
 	void modificarCelular();
+	void modificarLaptop();
 };
 
 #endif // DB_H

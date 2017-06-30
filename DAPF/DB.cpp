@@ -223,7 +223,7 @@ void DB::elegirModificar(){
 	cin>> x;
 	switch(x){
 	case 1:
-		//modificarLaptop();
+		modificarLaptop();
 		break;
 	case 2: 
 		modificarCelular();
@@ -243,13 +243,11 @@ void DB::insertar(){
 	switch(x){
 	case 1:
 		l.ingresar();
-		subirDB();
 		menu_principal();
 		seleccion1();
 		break;
 	case 2:
 		c.ingresar();
-		subirDB();
 		menu_principal();
 		seleccion1();
 		break;
@@ -320,11 +318,11 @@ void DB::modificarCelular(){
 	ver_Celulares();
 	int b;
 	cout<<"Que producto desea modificar?";cin>>b;
-	
-
-	string carac[5] = {"Codigo","Precio","Stock","Modelo","Camara"};
-	for(int i=0;i<5;i++)
-		cout<<carac[i]<<endl;
+	Celular *nuevo = celulares[b-1];
+	string carac[5] = {" 1. Codigo"," 2. Precio"," 3. Stock"," 4. Modelo"," 5. Camara"};
+	for(int i=0;i<5;i++){
+		int j=1;
+		cout<<" "<<carac[i]<<endl;}
 	int opc;
 	string algo;
 	
@@ -332,17 +330,61 @@ void DB::modificarCelular(){
 	cin>>algo;
 	switch(opc){
 	case 1:
+		nuevo->setCodigo(algo);
+		break;
+	case 2:
+		nuevo->setPventa(algo);
+		break;
+	case 3:
+		nuevo->setStock(algo);
+		break;
+	case 4:
+		nuevo->setModelo(algo);
+		break;
+	case 5:
+		nuevo->setCamara(algo);
+		break;
+	}
+	rewrite();
+}
+
+
+void DB::modificarLaptop(){
+	ver_Laptops();
+	int b;
+	cout<<"Que producto desea modificar?";cin>>b;
+	
+	
+	string carac[5] = {" 1. Codigo"," 2. Precio"," 3. Stock"," 4. Procesador"," 5. Disco Duro"};
+	for(int i=0;i<5;i++){
+		cout<<carac[i]<<endl;}
+	int opc;
+	string algo;
+	cout<< "Ingrese el numero: "<<endl;
+	cin>>opc;
+	cout<< "Ingrese: ";
+	cin>>algo;
+	
+	
+	switch(opc){
+	case 1:
 		celulares[b-1]->setCodigo(algo);
+		break;
 	case 2:
 		celulares[b-1]->setPventa(algo);
+		break;
 	case 3:
 		celulares[b-1]->setStock(algo);
+		break;
+
 	case 4:
 		celulares[b-1]->setModelo(algo);
+		break;
 	case 5:
 		celulares[b-1]->setCamara(algo);
-		
+		break;
 	}
+	
 	rewrite();
 }
 	

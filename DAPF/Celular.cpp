@@ -42,8 +42,8 @@ string Celular::getPalabra(string &palabra){
 string Celular::getModelo(){return modelo;}
 string Celular::getCamara(){return camara;}
 
-void Celular::setModelo(string modelo){this->modelo=modelo;}
-void Celular::setCamara(string camara){this->camara=camara;}
+void Celular::setModelo(string modelo){this->modelo=modelo; subir();}
+void Celular::setCamara(string camara){this->camara=camara;subir();}
 
 
 void Celular::print(){
