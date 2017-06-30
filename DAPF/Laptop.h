@@ -23,7 +23,7 @@ public:
 	void setMarca(string marca);
 	void print();
 	void subir();
-	/*
+	
 	friend ostream &operator<< (ostream &o,Laptop l){
 		o<<"CODIGO:"<<l.codigo<<endl;
 		o<<"PRECIO:"<<l.p_venta<<endl;
@@ -31,7 +31,7 @@ public:
 		o<<"PROCESADOR:"<<l.procesador<<endl;
 		o<<"MARCA:"<<l.marca;
 		return o;
-	}*/
+	}
 };
 
 #endif // LAPTOP_H
