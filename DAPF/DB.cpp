@@ -1,8 +1,15 @@
 #include "DB.h"
 
-DB::DB()
-{
+DB* DB::p_instancia = NULL;
+
+DB::DB(){
 	cargar();
+}
+
+DB* DB::instancia(){
+	if(!p_instancia)
+		p_instancia = new DB();
+	return p_instancia;
 }
 
 void DB::cargar(){
@@ -13,6 +20,7 @@ void DB::cargar(){
 	archivo.open("productos.txt");
 	while(!archivo.eof()){
 		getline(archivo,STRING);
+		
 		if(STRING[0]=='L'){
 			temp= new Laptop(STRING);
 			l = new Laptop(STRING);
@@ -26,28 +34,7 @@ void DB::cargar(){
 			productitos.push_back(temp);
 		}
 	}
-}
-/*
-void DB::Salvar(string nArchivo)
-{
-	// por defecto recupera los datos que estan almacenados en el archivo
-	archivo.open(nArchivo.c_str(),ios::out);
-	int cont=0;
-	for(int i=0;i<productitos.size();i++, cont++)
-	{
-		archivo<<productitos[i]->codigo<<",";
-		archivo<<productitos[i]->p_venta<<",";
-		archivo<<productitos[i]->stock<<"\n";
-	}
-	
-	cout<<cont<<" Registros guardados"<<endl;
 	archivo.close();
-}
-*/
-
-void DB::Insertar(Producto *p)
-{
-	productitos.push_back(p);
 }
 
 void DB::ver_Productos(){
@@ -56,10 +43,9 @@ void DB::ver_Productos(){
 		cout<<" Lista de productos vacia"<<endl;
 	else{
 		cout<<endl;
-		int j =1;
-		for(int i=0;i<t;i++){
+		for(int i=0;i<t-1;i++){
 			Producto* temp = productitos[i];
-			cout<<j++<<" ";
+			cout<<i+1<<" ";
 			temp->print();}
 	}
 }
@@ -76,6 +62,7 @@ void DB::ver_Laptops(){
 			cout<<j++<<" ";
 			temp->print();}
 	}
+	cout<<endl;
 }
 
 
@@ -85,38 +72,13 @@ void DB::ver_Celulares(){
 		cout<<"Lista de celulares vacia"<<endl;
 	else{
 		cout<<endl;
-		int j =1;
-		for(int i=0;i<c;i++){
+		for(int i=0;i<c-1;i++){
 			Celular* temp = celulares[i];
-			cout<<j++<<" ";
+			cout<<i+1<<" ";
 			temp->print();}
 	}
+	cout<<endl;
 }
-
-
-/*
-void DB::Seleccionar(){
-	void Visualizar();
-	bool ver=true;
-	do{
-	int a ;
-	cout<<"Que producto desea seleccionar?";cin>>a;
-	for(int j=0;j<productitos.size();j++){
-	if(a==j){
-	cout<<*productitos[j];
-	}
-	}
-	string result;
-	cout<<"Desea seguir seleccionando? s/n";cin>>result;
-	if(result=="si"){
-	ver==true;
-	}
-	else if(result=="no"){
-	ver=false;}
-	}while(ver==true);
-	}
-*/
-
 
 void DB::subirDB(){
 	int t=productitos.size()-1;
@@ -126,41 +88,75 @@ void DB::subirDB(){
 	}
 }
 
-void DB::Eliminar(){
+void DB::rewrite(){
+	ofstream ficheroSalida;
+	ficheroSalida.open ("productos.txt");
+	subirDB();
+	ficheroSalida.close();
+}
+
+void DB::Eliminar_p(){
 	ver_Productos();
 	bool encontrar=true;
 	while(encontrar == true){
 	int b;
 	cout<<"Que producto desea eliminar?";cin>>b;
-	for(int i=0;i<productitos.size()-1;i++){
+	for(int i=0;i<productitos.size();i++){
 		if(b-1==i)
 		productitos.erase(productitos.begin()+b-1);
 		encontrar = false;
 	}
 	}
-	ofstream ficheroSalida;
-	ficheroSalida.open ("productos.txt");
-	subirDB();
-	ficheroSalida.close();
-	
-	
-	
-	
+	rewrite();
 }
 
+void DB::Eliminar_l(){
+	ver_Laptops();
+	bool encontrar=true;
+	while(encontrar == true){
+		int b;
+		cout<<"Que producto desea eliminar?";cin>>b;
+		for(int i=0;i<laptops.size();i++){
+			if(b-1==i)
+				laptops.erase(laptops.begin()+b-1);
+			encontrar = false;
+		}
+	}
+	rewrite();
+}
+
+void DB::Eliminar_c(){
+	ver_Celulares();
+	bool encontrar=true;
+	while(encontrar == true){
+		int b;
+		cout<<"Que producto desea eliminar?";cin>>b;
+		for(int i=0;i<celulares.size();i++){
+			if(b-1==i)
+				celulares.erase(celulares.begin()+b-1);
+			encontrar = false;
+		}
+	}
+	rewrite();
+}
+
+
+
 void DB::menu_principal(){
+	cout<<endl;
 	cout<<" Bienvenido a su base de datos"<<endl;
 	cout<< " Desea : "<<endl;
 	cout<<endl;
-	string opciones[4] = {" 1. Insertar producto", " 2. Eliminar producto", " 3. Visualizar producto", " 4. Salir de la base de datos"};
-	for(int i=0;i<4;i++){
+	
+	string opciones[5] = {" 1. Ingresar producto", " 2. Eliminar producto", " 3. Visualizar producto", " 4. Modificar producto","5. Salir de la base de datos"};
+	for(int i=0;i<5;i++){
 		cout<<opciones[i]<<endl;
 		cout<<endl;
 	}
 }
 
 void DB::menu_insertar(){
-	string opciones[3] = {" 1. Insertar laptop", " 2. Insertar celular", " 3. Regresar al menu principal"};
+	string opciones[3] = {" 1. Ingresar laptop", " 2. Ingresar celular", " 3. Regresar al menu principal"};
 	for(int i=0;i<3;i++){
 		cout<<opciones[i]<<endl;
 		cout<<endl;
@@ -183,6 +179,14 @@ void DB::menu_visualizar(){
 	}
 }
 
+void DB::menu_modificar(){
+	string opciones[3] = {" 1. Modificar laptop", " 2. Modificar celular", " 3.Regresar al menu principal"};
+	for(int i=0;i<3;i++){
+		cout<<opciones[i]<<endl;
+		cout<<endl;
+	}
+}
+
 void DB::seleccion1(){
 	int x;
 	cout<< "Ingrese un numero: "; cin>> x;
@@ -190,17 +194,155 @@ void DB::seleccion1(){
 	switch(x){
 	case 1:
 		menu_insertar();
+		insertar();
 		break;
 	case 2:
 		menu_eliminar();
+		eliminar();
 		break;
 	case 3:
 		menu_visualizar();
+		visualizar();
 		break;
 	case 4:
+		menu_modificar();
+		elegirModificar();
+		
+		break;
+	case 5:
 		exit(1);
 		break;
 	default:
 		cout<<"El numero que ingreso es invalido intente de nuevo"<<endl;
 	}
 }
+
+void DB::elegirModificar(){
+	int x;
+	cout<<"Ingrese el numero:"<<endl;
+	cin>> x;
+	switch(x){
+	case 1:
+		//modificarLaptop();
+		break;
+	case 2: 
+		modificarCelular();
+		break;
+	case 3:
+		menu_principal();
+		seleccion1();
+		break;
+	case 4:
+		exit(1);
+	}
+}
+void DB::insertar(){
+	int x;
+	cout<< "Ingrese un numero: "; cin>> x;
+	cout<<endl;
+	switch(x){
+	case 1:
+		l.ingresar();
+		subirDB();
+		menu_principal();
+		seleccion1();
+		break;
+	case 2:
+		c.ingresar();
+		subirDB();
+		menu_principal();
+		seleccion1();
+		break;
+	case 3:
+		menu_principal();
+		seleccion1();
+		break;
+	default:
+		cout<<"El numero que ingreso es invalido intente de nuevo"<<endl;
+	}
+}
+
+void DB::visualizar(){
+	int x;
+	cout<< "Ingrese un numero: "; cin>> x;
+	cout<<endl;
+	switch(x){
+	case 1:
+		ver_Laptops();
+		menu_principal();
+		seleccion1();
+		break;
+	case 2:
+		ver_Celulares();
+		menu_principal();
+		seleccion1();
+		break;
+	case 3:
+		ver_Productos();
+		menu_principal();
+		seleccion1();
+		break;
+	case 4:
+		menu_principal();
+		seleccion1();
+		break;
+	default:
+		cout<<"El numero que ingreso es invalido intente de nuevo"<<endl;
+	}
+}
+
+void DB::eliminar(){
+	int x;
+	cout<< "Ingrese un numero: "; cin>> x;
+	cout<<endl;
+	switch(x){
+	case 1:
+		Eliminar_l();
+		menu_principal();
+		seleccion1();
+		break;
+	case 2:
+		Eliminar_c();
+		menu_principal();
+		seleccion1();
+		break;
+	case 3:
+		menu_principal();
+		seleccion1();
+		break;
+
+	default:
+		cout<<"El numero que ingreso es invalido intente de nuevo"<<endl;
+	}
+	
+}
+void DB::modificarCelular(){
+	ver_Celulares();
+	int b;
+	cout<<"Que producto desea modificar?";cin>>b;
+	
+
+	string carac[5] = {"Codigo","Precio","Stock","Modelo","Camara"};
+	for(int i=0;i<5;i++)
+		cout<<carac[i]<<endl;
+	int opc;
+	string algo;
+	
+	cin>>opc;
+	cin>>algo;
+	switch(opc){
+	case 1:
+		celulares[b-1]->setCodigo(algo);
+	case 2:
+		celulares[b-1]->setPventa(algo);
+	case 3:
+		celulares[b-1]->setStock(algo);
+	case 4:
+		celulares[b-1]->setModelo(algo);
+	case 5:
+		celulares[b-1]->setCamara(algo);
+		
+	}
+	rewrite();
+}
+	

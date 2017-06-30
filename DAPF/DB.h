@@ -9,27 +9,26 @@
 #include<stdlib.h>
 
 class DB{
-protected:
+private:
 	vector<Producto *> productitos;
 	vector<Celular *> celulares;
 	vector<Laptop *> laptops;
 	string texto;
-	fstream archivo;
 	
-public:
+	fstream archivo;
 	DB();
-	// Reimplementados
-	void Insertar(Producto *P);
+	static DB *p_instancia; 
+	Laptop l;
+	Celular c;
+public:
+	static DB* instancia();
 	void Recuperar(string nArchivo="productos.txt");
-	void Salvar(string nArchivo="productos.txt");
 	
 	void ver_Productos();
 	void ver_Laptops();
 	void ver_Celulares();
 	
 	
-	void Seleccionar();
-	void Eliminar();
 	void cargar();
 	void subirDB();
 	void Actualizar();
@@ -39,7 +38,17 @@ public:
 	void menu_insertar();
 	void menu_eliminar();
 	void menu_visualizar();
-	
+	void menu_modificar();
+	void insertar();
+	void visualizar();
+	void rewrite();
+	void Eliminar_c();
+	void Eliminar_l();
+	void Eliminar_p();
+	void eliminar();
+	void modificar();
+	void elegirModificar();
+	void modificarCelular();
 };
 
 #endif // DB_H

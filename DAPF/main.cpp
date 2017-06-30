@@ -8,21 +8,12 @@
 #include <string>
 using namespace std;
 
-//vector<string> instrucciones;
-
-
 int main()
 {
+	DB* c = DB::instancia();
+	c->menu_principal();
+	c->seleccion1();
+	//c->ver_Celulares();
 	
-	DB c;
-	c.ver_Productos();
-	c.ver_Laptops();
-	c.ver_Celulares();
-	
-	//c.Eliminar();
-	//c.Visualizar();
-		
-		
-		
 
 }

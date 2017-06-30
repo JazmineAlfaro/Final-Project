@@ -28,6 +28,7 @@ public:
 	void setPulgadas(string pulgadas);
 	void print();
 	void subir();
+	void ingresar();
 	/*
 	friend ostream &operator << (ostream &o,Celular c){
 		o<<"CODIGO:"<<c.codigo<<endl;

@@ -1,3 +1,11 @@
 Laptop1,1048.00,14,i7,Asus
 Celular1,600.00,5,Samsung S7,13 mp
-Laptop2,4800.00,1,i3,Dell
+Laptop2,920.65,4,i7,Dell
+Celular2,890.36,5,j,4
+L8,8,8,8,8
+L6,6,6,6,6
+Laptop1,1048.00,14,i7,Asus
+Celular1,600.00,5,Samsung S7,13 mp
+Laptop2,920.65,4,i7,Dell
+Celular2,890.36,5,j,4
+L8,8,8,8,8

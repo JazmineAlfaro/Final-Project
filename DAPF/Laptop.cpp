@@ -46,6 +46,25 @@ void Laptop::setMarca(string marca){this->marca=marca;}
 void Laptop::print(){
 	cout<<codigo<<" "<<p_venta<<" "<<stock<<" "<<procesador<<" "<<marca<<endl;
 }
+
+void Laptop::ingresar(){
+	Laptop l;
+	string preguntas[5]= {"Ingrese el codigo: ", "Ingrese el precio: ", "Ingrese el stock: ", "Ingrese el procesador", "Ingrese la marca: "};
+	string respuestas[5];
+	for(int i=0;i<5;i++){
+		cout<<preguntas[i];
+		cin>>respuestas[i]; 
+		cout<<endl;
+	}
+	l.setCodigo(respuestas[0]);
+	l.setPventa(respuestas[1]);
+	l.setStock(respuestas[2]);
+	l.setProcs(respuestas[3]);
+	l.setMarca(respuestas[4]);
+	l.subir();
+
+}
+
 void Laptop::subir(){
 	string datos;
 	datos = codigo +","+ p_venta + "," + stock + "," + procesador + "," + marca;

@@ -1,5 +1,6 @@
 #ifndef LAPTOP_H
 #define LAPTOP_H
+#include <vector>
 #include"Producto.h"
 
 
@@ -17,7 +18,7 @@ public:
 	string getPalabra(string &palabra);
 	string getProcs();
 	string getMarca();
-	
+	void ingresar();
 	void setProcs(string procesador);
 	void setMarca(string marca);
 	void print();

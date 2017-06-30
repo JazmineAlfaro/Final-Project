@@ -57,3 +57,21 @@ void Celular::subir(){
 	archivo<< datos<<endl;
 	archivo.close();
 }
+
+void Celular::ingresar(){
+	Celular c;
+	string preguntas[5]= {"Ingrese el codigo: ", "Ingrese el precio: ", "Ingrese el stock: ", "Ingrese el modelo", "Ingrese la camara: "};
+	string respuestas[5];
+	for(int i=0;i<5;i++){
+		cout<<preguntas[i];
+		cin>>respuestas[i]; 
+		cout<<endl;
+		}
+	c.setCodigo(respuestas[0]);
+	c.setPventa(respuestas[1]);
+	c.setStock(respuestas[2]);
+	c.setModelo(respuestas[3]);
+	c.setCamara(respuestas[4]);
+	c.subir();
+}
+

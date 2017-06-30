@@ -29,7 +29,7 @@ public:
 	void setStock(string stock);
 	
 	virtual void subir()=0;
-	
+	virtual void ingresar() = 0;
 	virtual void print()=0;
 	/*
 	friend ostream &operator << (ostream &o,Producto p)
