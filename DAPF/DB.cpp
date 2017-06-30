@@ -4,44 +4,30 @@ DB::DB()
 {
 	cargar();
 }
-/*
-void DB::Recuperar(string nArchivo)
-{
-	// por defecto recupera los datos que estan almacenados en el archivo
-	archivo.open(nArchivo.c_str(),ios::in);
-	string _producto;
-	Producto *p;
-	int cont=0;
-	do{
-		getline(archivo,_producto);
-		if(_producto!=""){
-			p=new Producto(_producto);
-			Insertar(p);
-			cont++;
-		}
-	}while(!archivo.eof());
-	
-	cout<<cont<<" Registros leidos"<<endl;
-	archivo.close();
-}
-*/
+
 void DB::cargar(){
 	Producto *temp;
+	Laptop *l;
+	Celular *c;
 	string STRING;
 	archivo.open("productos.txt");
 	while(!archivo.eof()){
 		getline(archivo,STRING);
-		switch (STRING[0]){
-		case 'L':
+		if(STRING[0]=='L'){
 			temp= new Laptop(STRING);
-			break;
-		case 'C':
-			temp = new Celular(STRING);
+			l = new Laptop(STRING);
+			laptops.push_back(l);
+			productitos.push_back(temp);
 		}
-		productitos.push_back(temp);
+		else{
+			temp = new Celular(STRING);
+			c = new Celular(STRING);
+			celulares.push_back(c);
+			productitos.push_back(temp);
+		}
 	}
 }
-
+/*
 void DB::Salvar(string nArchivo)
 {
 	// por defecto recupera los datos que estan almacenados en el archivo
@@ -57,29 +43,57 @@ void DB::Salvar(string nArchivo)
 	cout<<cont<<" Registros guardados"<<endl;
 	archivo.close();
 }
-
+*/
 
 void DB::Insertar(Producto *p)
 {
 	productitos.push_back(p);
 }
 
-void DB::Visualizar(){
+void DB::ver_Productos(){
 	int t=productitos.size();
 	if(t==0)
-		cout<<" Base de datos vacia"<<endl;
-	else
-	{
+		cout<<" Lista de productos vacia"<<endl;
+	else{
 		cout<<endl;
 		int j =1;
-		for(int i=0;i<t-1;i++){
+		for(int i=0;i<t;i++){
 			Producto* temp = productitos[i];
 			cout<<j++<<" ";
-			temp->print();
-			//cout<<j++<<"."<<*productitos[i]<<endl;
+			temp->print();}
 	}
 }
+
+void DB::ver_Laptops(){
+	int l=laptops.size();
+	if(l==0)
+		cout<<"Lista de laptops vacia"<<endl;
+	else{
+		cout<<endl;
+		int j =1;
+		for(int i=0;i<l;i++){
+			Laptop* temp = laptops[i];
+			cout<<j++<<" ";
+			temp->print();}
+	}
 }
+
+
+void DB::ver_Celulares(){
+	int c=celulares.size();
+	if(c==0)
+		cout<<"Lista de celulares vacia"<<endl;
+	else{
+		cout<<endl;
+		int j =1;
+		for(int i=0;i<c;i++){
+			Celular* temp = celulares[i];
+			cout<<j++<<" ";
+			temp->print();}
+	}
+}
+
+
 /*
 void DB::Seleccionar(){
 	void Visualizar();
@@ -113,7 +127,7 @@ void DB::subirDB(){
 }
 
 void DB::Eliminar(){
-	Visualizar();
+	ver_Productos();
 	bool encontrar=true;
 	while(encontrar == true){
 	int b;

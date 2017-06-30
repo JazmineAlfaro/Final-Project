@@ -11,6 +11,8 @@
 class DB{
 protected:
 	vector<Producto *> productitos;
+	vector<Celular *> celulares;
+	vector<Laptop *> laptops;
 	string texto;
 	fstream archivo;
 	
@@ -20,13 +22,18 @@ public:
 	void Insertar(Producto *P);
 	void Recuperar(string nArchivo="productos.txt");
 	void Salvar(string nArchivo="productos.txt");
-	void Visualizar();
+	
+	void ver_Productos();
+	void ver_Laptops();
+	void ver_Celulares();
+	
+	
 	void Seleccionar();
 	void Eliminar();
 	void cargar();
 	void subirDB();
 	void Actualizar();
-	
+	void separar();
 	void menu_principal();
 	void seleccion1();
 	void menu_insertar();

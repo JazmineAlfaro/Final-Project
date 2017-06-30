@@ -1,1 +1,3 @@
-Laptop1,48.00,14,i7,Asus
+Laptop1,1048.00,14,i7,Asus
+Celular1,600.00,5,Samsung S7,13 mp
+Laptop2,4800.00,1,i3,Dell
