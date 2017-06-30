@@ -46,3 +46,10 @@ void Laptop::setMarca(string marca){this->marca=marca;}
 void Laptop::print(){
 	cout<<codigo<<" "<<p_venta<<" "<<stock<<" "<<procesador<<" "<<marca<<endl;
 }
+void Laptop::subir(){
+	string datos;
+	datos = codigo +","+ p_venta + "," + stock + "," + procesador + "," + marca;
+	archivo.open ("productos.txt", fstream::out | fstream::app);
+	archivo<< datos<<endl;
+	archivo.close();
+}

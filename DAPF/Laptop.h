@@ -8,6 +8,7 @@ class Laptop:public Producto
 public:
 	string procesador;
 	string marca;
+
 public:
 	Laptop();
 	Laptop(string,string,string,string,string);
@@ -20,6 +21,7 @@ public:
 	void setProcs(string procesador);
 	void setMarca(string marca);
 	void print();
+	void subir();
 	/*
 	friend ostream &operator<< (ostream &o,Laptop l){
 		o<<"CODIGO:"<<l.codigo<<endl;

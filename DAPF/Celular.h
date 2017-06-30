@@ -2,12 +2,14 @@
 #define CELULAR_H
 #include "Producto.h"
 
+
 class Celular:public Producto
 {
 protected:
 	string modelo;
 	string camara;
 	string pulgadas;
+	fstream archivo;
 public:
 	Celular();
 	// Celular(string codigo,string p_venta,string stock,string modelo,string camara,string pulgadas);
@@ -25,6 +27,7 @@ public:
 	void setCamara(string camara);
 	void setPulgadas(string pulgadas);
 	void print();
+	void subir();
 	/*
 	friend ostream &operator << (ostream &o,Celular c){
 		o<<"CODIGO:"<<c.codigo<<endl;

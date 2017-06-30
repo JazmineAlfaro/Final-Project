@@ -11,6 +11,7 @@ public:
 	string p_venta; //costo y utilidad
 	string stock ; //ganancia
 	string getPalabra(string &);
+	fstream archivo;
 	
 public:
 	
@@ -26,6 +27,8 @@ public:
 	void setCodigo(string codigo);
 	void setPventa(string p_venta);
 	void setStock(string stock);
+	
+	virtual void subir()=0;
 	
 	virtual void print()=0;
 	/*

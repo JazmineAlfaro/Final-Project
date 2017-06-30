@@ -1,2 +1,1 @@
 Laptop1,48.00,14,i7,Asus
-Celular1,500.99,2,Galaxy S7,13mp

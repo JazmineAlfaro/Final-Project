@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include<fstream>
+#include<stdlib.h>
 
 class DB{
 protected:
@@ -15,7 +16,6 @@ protected:
 	
 public:
 	DB();
-	
 	// Reimplementados
 	void Insertar(Producto *P);
 	void Recuperar(string nArchivo="productos.txt");
@@ -24,9 +24,14 @@ public:
 	void Seleccionar();
 	void Eliminar();
 	void cargar();
-	
+	void subirDB();
 	void Actualizar();
-	void Consultar();
+	
+	void menu_principal();
+	void seleccion1();
+	void menu_insertar();
+	void menu_eliminar();
+	void menu_visualizar();
 	
 };
 

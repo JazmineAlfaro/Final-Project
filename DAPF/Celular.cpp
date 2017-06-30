@@ -45,6 +45,15 @@ string Celular::getCamara(){return camara;}
 void Celular::setModelo(string modelo){this->modelo=modelo;}
 void Celular::setCamara(string camara){this->camara=camara;}
 
+
 void Celular::print(){
 	cout<<codigo<<" "<<p_venta<<" "<<stock<<" "<<modelo<<" "<<camara<<endl;
+}
+
+void Celular::subir(){
+	string datos;
+	datos = codigo +","+ p_venta + "," + stock + "," + modelo + "," + camara;
+	archivo.open ("productos.txt", fstream::out | fstream::app);
+	archivo<< datos<<endl;
+	archivo.close();
 }
